@@ -1,0 +1,31 @@
+int m,n;
+void setup()
+{
+  pinMode(13, INPUT);
+  pinMode(12,INPUT);
+  pinMode(7, OUTPUT);
+  pinMode(2, OUTPUT);
+}
+
+void loop()
+{	
+  m=digitalRead(13);
+  n=digitalRead(12);
+  digitalWrite(7, LOW);
+  digitalWrite(2, LOW);
+  if(m==HIGH)
+     {
+        digitalWrite(7, HIGH);
+  		delay(20);
+       digitalWrite(7, LOW);
+  	 }
+       
+   if(n==HIGH)
+     {
+        digitalWrite(2, HIGH);
+  		delay(40);
+       digitalWrite(2, LOW);
+  	 }
+  
+  
+}
